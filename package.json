@@ -1,0 +1,24 @@
+{
+  "name": "template-automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:all": "npx playwright test",
+    "test:all:headed": "npx playwright test --headed",
+    "test:tag": "npx playwright test --grep @tagName",
+    "test:tag:headed": "npx playwright test --headed --grep @tagName",
+    "test-smoke": "npx playwright test --grep @smoke",
+    "report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@faker-js/faker": "^10.3.0",
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.7.0",
+    "@types/pg": "^8.15.6",
+    "dotenv": "^17.2.3"
+  }
+}
