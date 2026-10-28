@@ -12,7 +12,7 @@ export default defineConfig({
   reporter: 'html',
 
   use: {
-    baseURL: process.env.URL ?? 'https://www.uwm.com',
+    baseURL: process.env.URL || 'https://www.uwm.com',
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
