@@ -4,11 +4,11 @@ import * as dotenv from "dotenv";
 
 dotenv.config();
 
-/** UI fixture – navigates to process.env.URL and waits for network idle */
+/** UI fixture – navigates to process.env.URL and waits for DOMContentLoaded */
 export const test = base_test.extend({
   page: async ({ page }, use: Function) => {
     const url = process.env.URL || "https://www.uwm.com";
-    await page.goto(url, { waitUntil: "networkidle", timeout: 60_000 });
+    await page.goto(url, { waitUntil: "domcontentloaded" });
 
     BasePage.setPage(page);
     await use(page);
